@@ -594,7 +594,6 @@ a {
     overflow: hidden;
     box-shadow: var(--shadow);
 }
-
 .object--box::before {
     position: absolute;
     content: '';
@@ -605,6 +604,9 @@ a {
     right: -40%;
     transform: rotate(50deg);
     z-index: -1;
+}
+body{
+    background-image: url(../images/);
 }
 
 .object--box img {

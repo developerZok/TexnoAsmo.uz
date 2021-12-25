@@ -1,4 +1,3 @@
-
 let generalBox = document.querySelector(".z__kolonkis")
 let karzinka = []
 
@@ -99,9 +98,13 @@ function Abdu(data, generalBox) {
                     buttonKorzinka.classList.remove("bx", "bx-check", "bx-xl")
                     buttonKorzinka.appendChild(icon)
                 })
+
+
+
                 // todoo in korzinka delete
                 //  ?  prise function
                 let totalPrice = elem.prise
+
                 function priceTotal() {
                     let total = totalPrice * countModal
                     cartModalP.textContent = total
@@ -124,12 +127,18 @@ function Abdu(data, generalBox) {
                     }
                     priceTotal()
                 })
+
+                buttonKorzinka.classList.add("bx", "bx-check", "bx-xl")
+                buttonKorzinka.removeChild(icon)
                 //! counter button
+
 
                 karzinka.push(elem)
             }
         })
+
         // todoo in korzinka render
+
 
         img.setAttribute("src", elem.img)
         h5.textContent = elem.title
@@ -145,6 +154,7 @@ function Abdu(data, generalBox) {
         buttonModalScreen.classList.add("button__modal")
 
         generalBox.appendChild(objectBox)
+        objectBox.dataset.aos = "zoom-in"
         objectBox.appendChild(img)
         objectBox.appendChild(h5)
         objectBox.appendChild(div)
