@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/iron.css">
     <link rel="stylesheet" href="./css/main.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -15,9 +14,16 @@
         rel="stylesheet">
     <title>TexnoAsmo.uz</title>
 </head>
+
 <body>
-
-
+    <!-- ? loader -->
+    <!-- <div class="c-page-loader"> -->
+        <!-- <span></span> -->
+        <!-- <span></span> -->
+        <!-- <span></span> -->
+        <!-- <span></span> -->
+    <!-- </div> -->
+    <!-- ? lodaer end coding -->
     <!-- ! Header block -->
     <header class="c-header">
         <div class="container">
@@ -28,27 +34,34 @@
             </div>
             <nav class="c-header-nav">
                 <div class="c-brand-name">
+                    <a href="#c-modal-kateg-content" class="c-kategoriya-btn">
+                        <i class='bx bx-category'></i>
+                    </a>
+                     <!-- ! Kategoriya drowpdown -->
+                        <div id="c-kateg-modal">
+                        <div id="c-modal-kateg-content">
+                         <div class="c-modal-header">
+                             <h3>Bo'limlar</h3>
+                             <a href="#" class="c-close-kateg-modal"><i class='bx bx-x' ></i></a>
+                         </div>
+                         <div class="c-modal-body">
+                            <ul class="c-kategoriya-list">
+                                <li><a class="c-kateg-link" href="./index.html">Kolonka</a></li>
+                                <li><a class="c-kateg-link c-link" href="./iron.html"><i class='bx bx-chevron-left c-left'></i> Press Dazmol</a></li>
+                                <li><a class="c-kateg-link" href="./lazer.html">Lazer</a></li>
+                                <li><a class="c-kateg-link" href="./stanog.html">Vishivka Stanog</a></li>
+                            </ul>
+                        </div>
+                        </div>
+                         </div>
+                         <!-- !Kategoriya dropdown end -->
                     <img src="./images/logo.png" alt="image-logo" width="200px">
                 </div>
                 <form class="c-form">
-                    <input type="text" placeholder="Izlash...">
+                    <input class="c-input-search" type="text" placeholder="Izlash...">
                     <button class="c-search-btn"><i class='bx bx-search'></i></button>
                 </form>
                 <div class="c-btn-box">
-                     <!-- ! Kategoriya drowpdown -->
-                      <div class="c-kategoriya-box">
-                        <button class="c-kategoriya-btn">
-                            <i class='bx bx-category'></i>
-                            <span>Bo'limlar</span>
-                         </button>
-                         <ul class="c-kategoriya-list">
-                            <li><a class="c-kateg-link" href="/index.html">Kolonka</a></li>
-                            <li><a class="c-kateg-link c-link" href="/iron.html"> <i class='bx bx-chevron-left c-left'></i> Press Dazmol</a></li>
-                            <li><a class="c-kateg-link" href="/lazer.html">Lazer</a></li>
-                            <li><a class="c-kateg-link" href="/stanog.html">Vishivka Stanog</a></li>
-                         </ul>
-                      </div>
-                    <!-- !Kategoriya dropdown end -->
                     <a href="#c-modal" class="c-cart"><i class='bx bxs-cart'></i></a>
                     <a href="#c-profil-user" class="c-profil-btn"><i class='bx bxs-user-circle'></i></a>
                 </div>
@@ -104,18 +117,78 @@
     </header>
     <!-- ! Header block end -->
 
- <!-- ? Main block -->
-     <section class="c-iron-intro">
-         <div class="container">
-             <h1>Dazmol Pages</h1>
-             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium sapiente beatae culpa temporibus reprehenderit quasi, id iusto, dolorum tenetur asperiores atque magni ratione quia? Veritatis quod fuga ut obcaecati quidem reiciendis praesentium autem alias inventore provident, minus dignissimos pariatur, architecto aliquam tempora rerum quia perferendis repudiandae nemo cum. Dolore qui rem culpa aperiam illum officiis, voluptas veritatis neque magni fugiat, reprehenderit modi sunt tenetur, adipisci sed minus doloribus possimus eveniet fuga. Ullam aspernatur, quibusdam similique quaerat corrupti, quisquam consequuntur sequi tenetur earum dignissimos molestias facilis odio. Eum exercitationem omnis obcaecati dolor deserunt, corrupti voluptatem provident, dolorum tenetur molestias, distinctio ipsa!</p>
-         </div>
-     </section>
-  <!-- ? Main block  end-->
+    <!-- ? Main block -->
+    <main class="c-main">
+        <section id="c-intro" class="c-intro">
+            <div class="container">
+                <!-- ! Caruasel coding  -->
+                <div id="carouselExampleCaptions" class="carousel slide c-slider" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active c-car-item">
+                            <img src="./images/reklama1.jpeg" class="d-block w-100 h-100" alt="...">
+                        </div>
+                        <div class="carousel-item c-car-item">
+                            <img src="./images/reklama1.jpeg" class="d-block w-100 h-100" alt="...">
+                        </div>
+                        <div class="carousel-item c-car-item">
+                            <img src="./images/reklama1.jpeg" class="d-block w-100 h-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <!-- ! Carausel coding end -->
+                <div class="z__kolonkis"></div>
+                <div class="c-btn_div">
+                    <button class="c-ysho_btn">ko'proq ></button>
+                    <button class="c-close_btn">< orqaga</button>
+                </div>
+                <!-- modal -->
+                <div class="modal hide">
+                    <div class="modal__container">
+                        <img class="modal__img" src="" alt="">
+                        <div>
+                            <h2 class="modal__title"></h2>
+                            <h2 class="modal__prise"></h2>
+                        </div>
+                    </div>
 
+                    <a href="#" class="c-close-modal modal__close"> <i class='bx bx-chevron-left'></i>
+                        <span>Ortga</span></a>
+                </div>
+                <div class="fulls-modal hide">
+                    <div class="fulls-modal__container">
+                        <img class="fulls-modal__img" src="" alt="">
+                        <div>
+                            <h2 class="fulls-modal__title"></h2>
+                            <h2 class="fulls-modal__prise"></h2>
+                        </div>
+                    </div>
 
-     <!-- TODO Footer block -->
-     <footer class="c-footer">
+                    <a href="#" class="c-close-modal modal__close"> <i class='bx bx-chevron-left'></i>
+                        <span>Ortga</span></a>
+                </div>
+                <!-- end off modal -->
+            </div>
+            <div class="podrobno-container">
+                <div class="podrobno">
+                    <img src="./images/podrobno.jpeg" alt="">
+                    <img src="./images/podrobno1.jpeg" alt="">
+                    <img src="./images/podrobno2.jpeg" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- ? Main block end -->
+
+    <!-- TODO Footer block -->
+    <footer class="c-footer">
         <div class="container">
             <ul class="c-footer-list">
                 <li class="c-footer-item  c-footer-list-item">
@@ -172,10 +245,11 @@
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/data.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/dazmol_main.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
     <script>
         AOS.init();
     </script>
 </body>
+
 </html>

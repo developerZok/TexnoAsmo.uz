@@ -4,12 +4,20 @@ let kategUl = document.querySelector('.c-kategoriya-list');
 let elForm = document.querySelector('.c-form')
 let elInputSearch = document.querySelector('.c-input-search')
 let btnMore = document.querySelector('.c-ysho_btn')
+let btnClose = document.querySelector('.c-close_btn')
 let btnDiv = document.querySelector('.c-btn_div')
 
 
+// ! new coding
+let modalKateg = document.querySelector('#c-kateg-modal');
+let cModalClose = document.querySelector('.c-close-kateg-modal');
 kategBtn.addEventListener('click', () => {
-    kategUl.classList.toggle('c-show')
+    modalKateg.style.display = 'block'
 })
+cModalClose.addEventListener('click', () =>{
+    modalKateg.style.display = 'none'
+})
+// ! new coding end
 // ? kategoriya js codin end
 
 let generalBox = document.querySelector(".z__kolonkis")
@@ -23,12 +31,32 @@ Abdu(btnDiv.classList.contains('work') ? dates : !btnDiv.classList.contains('wor
 btnMore.addEventListener('click', () => {
     btnDiv.classList.remove('work')
     Abdu(btnDiv.classList.contains('work') ? dates : !btnDiv.classList.contains('work') ? kolonka : 'Xatolik', generalBox)
-   if(!btnDiv.classList.contains('work')) {
-       btnDiv.style.display = 'none'
-   }else {
-    btnDiv.style.display = 'flex'
-   }
+    if(btnDiv.classList.contains('work')) {
+        btnClose.style.display = 'none'
+        btnMore.style.display = 'block'
+       }else {
+        btnClose.style.display = 'block'
+        btnMore.style.display = 'none'
+       }
 })
+btnClose.addEventListener('click', () => {
+    btnDiv.classList.add('work')
+    Abdu(btnDiv.classList.contains('work') ? dates : !btnDiv.classList.contains('work') ? kolonka : 'Xatolik', generalBox)
+    if(btnDiv.classList.contains('work')) {
+        btnClose.style.display = 'none'
+        btnMore.style.display = 'block'
+       }else {
+        btnClose.style.display = 'block'
+        btnMore.style.display = 'none'
+       }
+})
+if(btnDiv.classList.contains('work')) {
+ btnClose.style.display = 'none'
+ btnMore.style.display = 'block'
+}else {
+ btnClose.style.display = 'block'
+ btnMore.style.display = 'none'
+}
 // btnDiv.classList.add('work')
 // btnMore.addEventListener('click', () => {
 //     btnDiv.classList.remove('work')
@@ -219,8 +247,8 @@ elForm.addEventListener('submit', (e) => {
     Abdu(foundFilms, generalBox);
 })
 //  ! lodaer coding
-window.addEventListener('load', e => {
-    let pageLoader = document.querySelector('.c-page-loader').style.display = 'none';
-})
+// window.addEventListener('load', e => {
+//     let pageLoader = document.querySelector('.c-page-loader').style.display = 'none';
+// })
 // ! lodaer coding
 
