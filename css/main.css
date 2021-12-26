@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 :root {
     --green: #00a84c;
     --main-color: #eaa023;
@@ -202,24 +203,92 @@ a {
     border-radius: 10px;
     transition: .5s;
 }
-
+.c-kategoriya-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+    background: var(--green);
+    padding: 8px;
+    border-radius: 15px;
+    color:  #fff;
+    transition: .5s;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.c-kategoriya-btn > i{
+    font-size: 23px;
+    margin-right: 10px;
+}
 .c-cart:hover,
-.c-profil-btn:hover {
+.c-profil-btn:hover,
+.c-kategoriya-btn:hover {
     color: #fff;
     transform: scale(1.05);
 }
-
 .c-btn-box {
     display: flex;
     align-items: center;
 }
-
 .c-profil-btn {
     font-size: 25px;
     margin-left: 20px;
 }
+.c-kategoriya-box{
+    position: relative;
+}
+.c-kategoriya-list{
+    width: 200px;
+    background: var(--green);
+    padding: 10px;
+    border-radius: 15px;
+    position: absolute;
+    top: 55px;
+    right: -20px;
+    transition: 1s;
+    display: none;
+}
+.c-show{
+    display: block;
+}
 
+.c-active{
+    font-weight: bold;
+    color: #f00;
+}
 
+.c-link{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.c-left{
+    font-weight: bold;
+    font-size: 25px;
+    margin-right: 2px;
+}
+.c-kategoriya-list::before{
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 25px;
+    background: var(--green);
+    border-radius: 5px;
+    top: -10px;
+    left: 43%;
+    transform: rotate(45deg);
+}
+.c-kategoriya-list > li{
+    border-bottom: 1px solid #fff;
+    padding: 5px;
+}
+.c-kategoriya-list > li:nth-child(4){
+    border: none;
+}
+.c-kategoriya-list > li > a{
+    color: #fff;
+}
 /* Modal */
 #c-modal,
 #c-profil-user {
@@ -441,6 +510,8 @@ a {
 .c-footer {
     padding: 15px 0;
     background: rgb(11, 41, 71);
+    bottom: 0;
+    width: 100%;
 }
 
 .c-hr {
@@ -579,7 +650,7 @@ a {
 /* Footer block end */
 .z__kolonkis {
     display: flex;
-    justify-content: start;
+    justify-content: space-around;
     flex-wrap: wrap;
     padding-top: 50px;
 }
@@ -589,7 +660,8 @@ a {
     width: 250px;
     padding: 10px;
     border-radius: 6px;
-    margin: 35px;
+    margin-bottom: 35px;
+    margin-top: 35px;
     position: relative;
     overflow: hidden;
     box-shadow: var(--shadow);
@@ -605,9 +677,6 @@ a {
     transform: rotate(50deg);
     z-index: -1;
 }
-body{
-    background-image: url(../images/);
-}
 
 .object--box img {
     width: 202px;
@@ -618,10 +687,24 @@ body{
 }
 
 .object--box img:hover {
-    transform: scale(1.08);
-
+    transform: scale(1.11);
 }
-
+.c-ysho_btn{
+    background-color: #00a84c;
+    border: none;
+    width: 111px;
+    height: 44px;
+    border-radius: 16px;
+    color: #fff;
+    font-family: "Nunito";
+    font-size: 20px;
+    margin-bottom: 22px;
+}
+.c-btn_div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .object--about {
     display: flex;
     justify-content: space-between;

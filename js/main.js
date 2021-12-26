@@ -1,7 +1,47 @@
+// ? kategoriya js coding
+let kategBtn = document.querySelector('.c-kategoriya-btn');
+let kategUl = document.querySelector('.c-kategoriya-list');
+let elForm = document.querySelector('.c-form')
+let elInputSearch = document.querySelector('.c-input-search')
+let btnMore = document.querySelector('.c-ysho_btn')
+let btnDiv = document.querySelector('.c-btn_div')
+
+
+kategBtn.addEventListener('click', () => {
+    kategUl.classList.toggle('c-show')
+})
+// ? kategoriya js codin end
+
 let generalBox = document.querySelector(".z__kolonkis")
 let karzinka = []
+let cound_system = 0;
+
+btnDiv.classList.add('work')
+
+Abdu(btnDiv.classList.contains('work') ? dates : !btnDiv.classList.contains('work') ? kolonka : 'Xatolik', generalBox)
+
+btnMore.addEventListener('click', () => {
+    btnDiv.classList.remove('work')
+    Abdu(btnDiv.classList.contains('work') ? dates : !btnDiv.classList.contains('work') ? kolonka : 'Xatolik', generalBox)
+   if(!btnDiv.classList.contains('work')) {
+       btnDiv.style.display = 'none'
+   }else {
+    btnDiv.style.display = 'flex'
+   }
+})
+// btnDiv.classList.add('work')
+// btnMore.addEventListener('click', () => {
+//     btnDiv.classList.remove('work')
+//    if(!btnDiv.classList.contains('work')) {
+//        btnDiv.style.display = 'none'
+//    }else {
+//     btnDiv.style.display = 'flex'
+//    }
+// })
 
 function Abdu(data, generalBox) {
+    generalBox.innerHTML = null;
+
     data.map(elem => {
         let objectBox = document.createElement("div")
         let div = document.createElement("div")
@@ -164,9 +204,23 @@ function Abdu(data, generalBox) {
         buttonKorzinka.appendChild(icon)
     })
 }
-Abdu(kolonka, generalBox)
+elForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    let elInputValue = elInputSearch.value.trim();
+    const regex = new RegExp(elInputValue, 'gi')
+    const filteredFilms = kolonka.filter((kolones) => kolones.title.match(regex));
+
+    let foundFilms = [];
+
+    foundFilms = filteredFilms;
+
+    elInputSearch.value = ''
+
+    Abdu(foundFilms, generalBox);
+})
 //  ! lodaer coding
 window.addEventListener('load', e => {
     let pageLoader = document.querySelector('.c-page-loader').style.display = 'none';
 })
 // ! lodaer coding
+

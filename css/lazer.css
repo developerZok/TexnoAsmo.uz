@@ -1,0 +1,17 @@
+/* ! Lazer section */
+.c-lazer-intro{
+    padding: 145px 0;
+}
+.c-lazer-link{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+/* ! Lazer section end */
+
+
+/* @media only screen and (max-width: 1150px) { */
+    /* .c-form{ */
+        /* width: 350px !important; */
+    /* } */
+/* } */

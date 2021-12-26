@@ -1,240 +1,253 @@
-let kolonka = [
-    {
+// const btnDiv = document.querySelector('.c-btn_div')
+
+let kolonka = [{
         id: 1,
-        title: "Best the best BASS",
+        title: "kolonka 1",
         prise: 123000,
         img: "./images/kolonka.jpeg"
 
     },
     {
         id: 2,
-        title: "Best the best BASS",
+        title: "kolonka 2",
         prise: 123000,
         img: "./images/kolonka1.jpeg"
 
     },
     {
         id: 3,
-        title: "Best the best BASS",
+        title: "kolonka 3",
         prise: 123000,
         img: "./images/kolonka2.jpeg"
 
     },
     {
         id: 4,
-        title: "Best the best BASS",
+        title: "kolonka 4",
         prise: 123000,
         img: "./images/kolonka3.jpeg"
 
     },
     {
         id: 5,
-        title: "Best the best BASS",
+        title: "kolonka 5",
         prise: 123000,
         img: "./images/kolonka4.jpeg"
 
     },
     {
         id: 6,
-        title: "Best the best BASS",
+        title: "kolonka 6",
         prise: 123000,
         img: "./images/kolonka5.jpeg"
 
     },
     {
         id: 7,
-        title: "Best the best BASS",
+        title: "kolonka 7",
         prise: 123000,
         img: "./images/kolonka6.jpeg"
 
     },
     {
         id: 8,
-        title: "Best the best BASS",
+        title: "kolonka 8",
         prise: 123000,
         img: "./images/kolonka7.jpeg"
 
     },
     {
         id: 9,
-        title: "Best the best BASS",
+        title: "kolonka 9",
         prise: 123000,
         img: "./images/kolonka8.jpeg"
 
     },
     {
         id: 10,
-        title: "Best the best BASS",
+        title: "kolonka 10",
         prise: 123000,
         img: "./images/kolonka9.jpeg"
 
     },
     {
         id: 11,
-        title: "Best the best BASS",
+        title: "kolonka 11",
         prise: 123000,
         img: "./images/kolonka10.jpeg"
 
     },
     {
         id: 12,
-        title: "Best the best BASS",
+        title: "kolonka 12",
         prise: 123000,
         img: "./images/kolonka11.jpeg"
 
     },
     {
         id: 13,
-        title: "Best the best BASS",
+        title: "kolonka 13",
         prise: 123000,
         img: "./images/kolonka12.jpeg"
 
     },
     {
         id: 14,
-        title: "Best the best BASS",
+        title: "kolonka 14",
         prise: 123000,
         img: "./images/kolonka13.jpeg"
 
     },
     {
         id: 15,
-        title: "Best the best BASS",
+        title: "kolonka 15",
         prise: 123000,
         img: "./images/kolonka14.jpeg"
 
     },
     {
         id: 16,
-        title: "Best the best BASS",
+        title: "kolonka 16",
         prise: 123000,
         img: "./images/kolonka15.jpeg"
 
     },
     {
         id: 17,
-        title: "Best the best BASS",
+        title: "kolonka 17",
         prise: 123000,
         img: "./images/kolonka16.jpeg"
 
     },
     {
         id: 1,
-        title: "Best the best BASS",
+        title: "kolonka 18",
         prise: 123000,
         img: "./images/kolonka.jpeg"
 
     },
     {
         id: 2,
-        title: "Best the best BASS",
+        title: "kolonka 19",
         prise: 123000,
         img: "./images/kolonka1.jpeg"
 
     },
     {
         id: 3,
-        title: "Best the best BASS",
+        title: "kolonka 20",
         prise: 123000,
         img: "./images/kolonka2.jpeg"
 
     },
     {
         id: 4,
-        title: "Best the best BASS",
+        title: "kolonka 21",
         prise: 123000,
         img: "./images/kolonka3.jpeg"
 
     },
     {
         id: 5,
-        title: "Best the best BASS",
+        title: "kolonka 22",
         prise: 123000,
         img: "./images/kolonka4.jpeg"
 
     },
     {
         id: 6,
-        title: "Best the best BASS",
+        title: "kolonka 23",
         prise: 123000,
         img: "./images/kolonka5.jpeg"
 
     },
     {
         id: 7,
-        title: "Best the best BASS",
+        title: "kolonka 24",
         prise: 123000,
         img: "./images/kolonka6.jpeg"
 
     },
     {
         id: 8,
-        title: "Best the best BASS",
+        title: "kolonka 25",
         prise: 123000,
         img: "./images/kolonka7.jpeg"
 
     },
     {
         id: 9,
-        title: "Best the best BASS",
+        title: "kolonka 26",
         prise: 123000,
         img: "./images/kolonka8.jpeg"
 
     },
     {
         id: 10,
-        title: "Best the best BASS",
+        title: "kolonka 27",
         prise: 123000,
         img: "./images/kolonka9.jpeg"
 
     },
     {
         id: 11,
-        title: "Best the best BASS",
+        title: "kolonka 28",
         prise: 123000,
         img: "./images/kolonka10.jpeg"
 
     },
     {
         id: 12,
-        title: "Best the best BASS",
+        title: "kolonka 29",
         prise: 123000,
         img: "./images/kolonka11.jpeg"
 
     },
     {
         id: 13,
-        title: "Best the best BASS",
+        title: "kolonka 30",
         prise: 123000,
         img: "./images/kolonka12.jpeg"
 
     },
     {
         id: 14,
-        title: "Best the best BASS",
+        title: "kolonka 31",
         prise: 123000,
         img: "./images/kolonka13.jpeg"
 
     },
     {
         id: 15,
-        title: "Best the best BASS",
+        title: "kolonka 32",
         prise: 123000,
         img: "./images/kolonka14.jpeg"
 
     },
     {
         id: 16,
-        title: "Best the best BASS",
+        title: "kolonka 33",
         prise: 123000,
         img: "./images/kolonka15.jpeg"
 
     },
     {
         id: 17,
-        title: "Best the best BASS",
+        title: "kolonka 34",
         prise: 123000,
         img: "./images/kolonka16.jpeg"
 
     }
 ]
+
+let dates = []
+
+let kolonka2 = [];
+
+kolonka && kolonka.slice(0, 4).map(elem => {
+    kolonka2.push(elem)
+})
+
+kolonka2.map(elem => {
+    dates.push(elem)
+})

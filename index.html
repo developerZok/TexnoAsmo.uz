@@ -37,10 +37,24 @@
                     <img src="./images/logo.png" alt="image-logo" width="200px">
                 </div>
                 <form class="c-form">
-                    <input type="text" placeholder="Izlash...">
+                    <input class="c-input-search" type="text" placeholder="Izlash...">
                     <button class="c-search-btn"><i class='bx bx-search'></i></button>
                 </form>
                 <div class="c-btn-box">
+                     <!-- ! Kategoriya drowpdown -->
+                      <div class="c-kategoriya-box">
+                        <button class="c-kategoriya-btn">
+                            <i class='bx bx-category'></i>
+                            <span>Bo'limlar</span>
+                         </button>
+                         <ul class="c-kategoriya-list">
+                             <li><a class="c-kateg-link c-link" href="/index.html"><i class='bx bx-chevron-left c-left'></i> Kolonka</a></li>
+                             <li><a class="c-kateg-link" href="/iron.html">Press Dazmol</a></li>
+                             <li><a class="c-kateg-link" href="/lazer.html">Lazer</a></li>
+                             <li><a class="c-kateg-link" href="/stanog.html">Vishivka Stanog</a></li>
+                         </ul>
+                      </div>
+                    <!-- !Kategoriya dropdown end -->
                     <a href="#c-modal" class="c-cart"><i class='bx bxs-cart'></i></a>
                     <a href="#c-profil-user" class="c-profil-btn"><i class='bx bxs-user-circle'></i></a>
                 </div>
@@ -63,8 +77,7 @@
                                         <div class="c-input__group">
                                             <label for="">Telefon raqam</label>
                                             <i class='bx bx-phone' id="c-icons"></i>
-                                            <input type="tel" name="phone" value="+998"
-                                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                                            <input type="tel" name="phone" value="+998" required>
                                         </div>
                                         <div class="c-input__group">
                                             <label for="">Manzil</label>
@@ -125,6 +138,9 @@
                 </div>
                 <!-- ! Carausel coding end -->
                 <div class="z__kolonkis"></div>
+                <div class="c-btn_div">
+                    <button class="c-ysho_btn">more ></button>
+                </div>
                 <!-- modal -->
                 <div class="modal hide">
                     <div class="modal__container">
@@ -218,10 +234,11 @@
         </div>
     </footer>
     <!-- TODO Footer block end -->
+    <script src="./js/bootstrap.min.js"></script>
     <script src="./js/data.js"></script>
+    <script src="./js/slicedata.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/main.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
     <script>
         AOS.init();
