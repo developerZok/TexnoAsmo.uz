@@ -20,9 +20,30 @@
 html {
     scroll-behavior: smooth;
 }
-
-body {
+.modal__text{
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    text-align: center;
+    width: 444px;
+}
+body{
     font-family: 'Poppins', sans-serif;
+    scrollbar-color: #d4aa70 #e4e4e4;
+    scrollbar-width: thin;
+    
+}
+body::-webkit-scrollbar {
+    width: 8px;
+}
+body::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    border-radius: 100px;
+}
+body::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-image: linear-gradient(180deg, #00a84c 0%, rgb(11, 41, 71) 99%);
+    box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
 }
 
 ol,
@@ -110,7 +131,9 @@ a {
     position: fixed;
     width: 100%;
     z-index: 10;
-    background: hsl(216, 13%, 92%);
+    background: #e7e7e7;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
 }
 
 .c-header-nav {
@@ -644,7 +667,6 @@ a {
     font-size: 15px;
     color: #fff;
 }
-
 .c-btn-top {
     position: absolute;
     border: 2px solid var(--green);
@@ -959,19 +981,18 @@ a {
 
 /*! objects */
 /* podrobno */
-.podrobno-container {
-    width: 1340px;
-    margin: 0 auto;
-}
+/* .podrobno-container { */
+    /* width: 1300px; */
+    /* margin: 0 auto; */
+/* } */
 
 .podrobno {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 auto;
+    justify-content: space-around;
 }
 
 .podrobno img {
-    width: 443px;
+    width: 400px;
     border-radius: 6px;
 }

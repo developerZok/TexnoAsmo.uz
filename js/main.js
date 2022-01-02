@@ -93,10 +93,12 @@ function Abdu(data, generalBox) {
             let modalImg = document.querySelector(".modal__img")
             let modalTitle = document.querySelector(".modal__title")
             let modalPrise = document.querySelector(".modal__prise")
+            let modalText = document.querySelector(".modal__text")
 
             modalImg.src = finddata.img
             modalTitle.textContent = finddata.title
             modalPrise.textContent = finddata.prise
+            modalText.textContent = finddata.description
         })
         // button hide
         buttonClose.addEventListener("click", () => {
@@ -243,6 +245,39 @@ elForm.addEventListener('submit', (e) => {
     foundFilms = filteredFilms;
 
     elInputSearch.value = ''
+
+    btnDiv.classList.remove('work')
+
+    btnMore.addEventListener('click', () => {
+        btnDiv.classList.remove('work')
+        Abdu(btnDiv.classList.contains('work') ? dates : !btnDiv.classList.contains('work') ? kolonka : 'Xatolik', generalBox)
+        if(btnDiv.classList.contains('work')) {
+            btnClose.style.display = 'none'
+            btnMore.style.display = 'block'
+           }else {
+            btnClose.style.display = 'block'
+            btnMore.style.display = 'none'
+           }
+    })
+    btnClose.addEventListener('click', () => {
+        btnDiv.classList.add('work')
+        Abdu(btnDiv.classList.contains('work') ? dates : !btnDiv.classList.contains('work') ? kolonka : 'Xatolik', generalBox)
+        if(btnDiv.classList.contains('work')) {
+            btnClose.style.display = 'none'
+            btnMore.style.display = 'block'
+           }else {
+            btnClose.style.display = 'block'
+            btnMore.style.display = 'none'
+           }
+    })
+
+    if(btnDiv.classList.contains('work')) {
+        btnClose.style.display = 'none'
+        btnMore.style.display = 'block'
+       }else {
+        btnClose.style.display = 'block'
+        btnMore.style.display = 'none'
+       }
 
     Abdu(foundFilms, generalBox);
 })
