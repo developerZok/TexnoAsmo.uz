@@ -49,6 +49,7 @@ body::-webkit-scrollbar-thumb {
 ol,
 ul {
     list-style: none;
+    padding-left: 0;
 }
 
 a {
@@ -69,7 +70,7 @@ a {
     display: flex;
     left: 0;
     top: 0;
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
     z-index: 1000000;
     transition: all 1s ease;
@@ -140,6 +141,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0 auto;
 }
 
 .c-location-info-box {
@@ -204,7 +206,7 @@ a {
 }
 
 .c-search-btn {
-    padding: 6px 30px;
+    padding: 6px 15px;
     right: 0;
     position: absolute;
     border: none;
@@ -233,7 +235,7 @@ a {
 #c-kateg-modal{
     position: fixed;
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
     top: 0;
     right: 0;
     left: 0;
@@ -558,9 +560,10 @@ a {
 /* Main block end */
 
 /* Footer block */
+
 .c-footer {
-    padding: 15px 0;
     background: rgb(11, 41, 71);
+    padding: 15px 0;
     bottom: 0;
 }
 
@@ -574,7 +577,7 @@ a {
     justify-content: space-between;
 }
 
-.c-footer-item-list>h4 {
+.c-footer-item-list >h4 {
     font-size: 18px;
     font-weight: bold;
     color: #fff;
@@ -702,6 +705,7 @@ a {
     justify-content: space-around;
     flex-wrap: wrap;
     padding-top: 50px;
+    width: 100%;
 }
 
 .object--box {
@@ -980,11 +984,6 @@ a {
 }
 
 /*! objects */
-/* podrobno */
-/* .podrobno-container { */
-    /* width: 1300px; */
-    /* margin: 0 auto; */
-/* } */
 
 .podrobno {
     display: flex;

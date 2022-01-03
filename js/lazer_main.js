@@ -72,7 +72,7 @@ function Abdu(data, generalBox) {
     generalBox.innerHTML = null;
 
     data.map(elem => {
-        let objectBox = document.createElement("div")
+        let objectBox = document.createElement("li")
         let div = document.createElement("div")
         let img = document.createElement("img")
         let h5 = document.createElement("h5")
