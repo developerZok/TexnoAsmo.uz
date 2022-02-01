@@ -204,8 +204,22 @@ a {
     font-weight: bold;
     color: var(--dark);
 }
+.c-form-bottom{
+    display: none;
+}
 
 .c-search-btn {
+    padding: 6px 15px;
+    right: 0;
+    position: absolute;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    background-color: var(--green);
+    color: #fff;
+    font-size: 17px;
+}
+.c-search-btn-bottom {
     padding: 6px 15px;
     right: 0;
     position: absolute;
@@ -232,10 +246,26 @@ a {
     border-radius: 10px;
     transition: .5s;
 }
+.c-profil-btn-top-480{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background: var(--green);
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    border-radius: 10px;
+    transition: .5s;
+    display: none;
+    padding-left: 9px;
+    padding-top: 5px;
+}
 #c-kateg-modal{
     position: fixed;
     width: 100vw;
-    /* height: 100vh; */
     top: 0;
     right: 0;
     left: 0;

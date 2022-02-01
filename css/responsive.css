@@ -27,9 +27,11 @@
     .podrobno img {
         width: 300px;
     }
+
     .c-form {
         width: 300px;
     }
+
     .c-footer-list {
         display: flex;
         align-items: center;
@@ -94,10 +96,6 @@
     .c-brand-name>img {
         width: 150px;
     }
-
-    /* .c-search-btn {
-        padding: 6px 15px;
-    } */
 
     .c-btn-box {
         position: fixed;
@@ -193,5 +191,44 @@
     .podrobno>img:nth-child(3) {
         width: 90%;
         height: 170px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .c-profil-btn-top-480 {
+        display: block;
+    }
+
+    .c-profil-btn {
+        display: none;
+    }
+
+    .c-form>input,
+    .c-form>button {
+        display: none;
+    }
+
+    .c-form {
+        width: 40px;
+    }
+
+    .c-form-bottom {
+        width: 220px;
+        position: relative;
+        display: block;
+    }
+    .c-form-bottom>input {
+        width: 210px;
+        margin-right: 10px;
+        padding: 6px 50px 6px 20px;
+        border-radius: 30px;
+        outline: none;
+        border: 2px solid var(--green);
+        font-size: 15px;
+        font-weight: bold;
+        color: var(--dark);
+    }
+    .c-form-bottom>.c-search-btn{
+        right: 10px;
     }
 }

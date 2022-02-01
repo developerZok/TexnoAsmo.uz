@@ -2,11 +2,11 @@
 let kategBtn = document.querySelector('.c-kategoriya-btn');
 let kategUl = document.querySelector('.c-kategoriya-list');
 let elForm = document.querySelector('.c-form')
+let elForm_bottom = document.querySelector('.c-form-bottom')
 let elInputSearch = document.querySelector('.c-input-search')
 let btnMore = document.querySelector('.c-ysho_btn')
 let btnClose = document.querySelector('.c-close_btn')
 let btnDiv = document.querySelector('.c-btn_div')
-
 
 // ! new coding
 let modalKateg = document.querySelector('#c-kateg-modal');
@@ -14,7 +14,7 @@ let cModalClose = document.querySelector('.c-close-kateg-modal');
 kategBtn.addEventListener('click', () => {
     modalKateg.style.display = 'block'
 })
-cModalClose.addEventListener('click', () =>{
+cModalClose.addEventListener('click', () => {
     modalKateg.style.display = 'none'
 })
 // ! new coding end
@@ -31,41 +31,32 @@ Abdu(btnDiv.classList.contains('work') ? dates : !btnDiv.classList.contains('wor
 btnMore.addEventListener('click', () => {
     btnDiv.classList.remove('work')
     Abdu(btnDiv.classList.contains('work') ? dates : !btnDiv.classList.contains('work') ? kolonka : 'Xatolik', generalBox)
-    if(btnDiv.classList.contains('work')) {
+    if (btnDiv.classList.contains('work')) {
         btnClose.style.display = 'none'
         btnMore.style.display = 'block'
-       }else {
+    } else {
         btnClose.style.display = 'block'
         btnMore.style.display = 'none'
-       }
+    }
 })
 btnClose.addEventListener('click', () => {
     btnDiv.classList.add('work')
     Abdu(btnDiv.classList.contains('work') ? dates : !btnDiv.classList.contains('work') ? kolonka : 'Xatolik', generalBox)
-    if(btnDiv.classList.contains('work')) {
+    if (btnDiv.classList.contains('work')) {
         btnClose.style.display = 'none'
         btnMore.style.display = 'block'
-       }else {
+    } else {
         btnClose.style.display = 'block'
         btnMore.style.display = 'none'
-       }
+    }
 })
-if(btnDiv.classList.contains('work')) {
- btnClose.style.display = 'none'
- btnMore.style.display = 'block'
-}else {
- btnClose.style.display = 'block'
- btnMore.style.display = 'none'
+if (btnDiv.classList.contains('work')) {
+    btnClose.style.display = 'none'
+    btnMore.style.display = 'block'
+} else {
+    btnClose.style.display = 'block'
+    btnMore.style.display = 'none'
 }
-// btnDiv.classList.add('work')
-// btnMore.addEventListener('click', () => {
-//     btnDiv.classList.remove('work')
-//    if(!btnDiv.classList.contains('work')) {
-//        btnDiv.style.display = 'none'
-//    }else {
-//     btnDiv.style.display = 'flex'
-//    }
-// })
 
 function Abdu(data, generalBox) {
     generalBox.innerHTML = null;
@@ -251,39 +242,80 @@ elForm.addEventListener('submit', (e) => {
     btnMore.addEventListener('click', () => {
         btnDiv.classList.remove('work')
         Abdu(btnDiv.classList.contains('work') ? dates : !btnDiv.classList.contains('work') ? kolonka : 'Xatolik', generalBox)
-        if(btnDiv.classList.contains('work')) {
+        if (btnDiv.classList.contains('work')) {
             btnClose.style.display = 'none'
             btnMore.style.display = 'block'
-           }else {
+        } else {
             btnClose.style.display = 'block'
             btnMore.style.display = 'none'
-           }
+        }
     })
     btnClose.addEventListener('click', () => {
         btnDiv.classList.add('work')
         Abdu(btnDiv.classList.contains('work') ? dates : !btnDiv.classList.contains('work') ? kolonka : 'Xatolik', generalBox)
-        if(btnDiv.classList.contains('work')) {
+        if (btnDiv.classList.contains('work')) {
             btnClose.style.display = 'none'
             btnMore.style.display = 'block'
-           }else {
+        } else {
             btnClose.style.display = 'block'
             btnMore.style.display = 'none'
-           }
+        }
     })
 
-    if(btnDiv.classList.contains('work')) {
+    if (btnDiv.classList.contains('work')) {
         btnClose.style.display = 'none'
         btnMore.style.display = 'block'
-       }else {
+    } else {
         btnClose.style.display = 'block'
         btnMore.style.display = 'none'
-       }
+    }
 
     Abdu(foundFilms, generalBox);
 })
-//  ! lodaer coding
-// window.addEventListener('load', e => {
-//     let pageLoader = document.querySelector('.c-page-loader').style.display = 'none';
-// })
-// ! lodaer coding
+elForm_bottom.addEventListener('submit', (e) => {
+    e.preventDefault()
+    let elInputValue = elInputSearch.value.trim();
+    const regex = new RegExp(elInputValue, 'gi')
+    const filteredFilms = kolonka.filter((kolones) => kolones.title.match(regex));
 
+    let foundFilms = [];
+
+    foundFilms = filteredFilms;
+
+    elInputSearch.value = ''
+
+    btnDiv.classList.remove('work')
+
+    btnMore.addEventListener('click', () => {
+        btnDiv.classList.remove('work')
+        Abdu(btnDiv.classList.contains('work') ? dates : !btnDiv.classList.contains('work') ? kolonka : 'Xatolik', generalBox)
+        if (btnDiv.classList.contains('work')) {
+            btnClose.style.display = 'none'
+            btnMore.style.display = 'block'
+        } else {
+            btnClose.style.display = 'block'
+            btnMore.style.display = 'none'
+        }
+    })
+    btnClose.addEventListener('click', () => {
+        btnDiv.classList.add('work')
+        Abdu(btnDiv.classList.contains('work') ? dates : !btnDiv.classList.contains('work') ? kolonka : 'Xatolik', generalBox)
+        if (btnDiv.classList.contains('work')) {
+            btnClose.style.display = 'none'
+            btnMore.style.display = 'block'
+        } else {
+            btnClose.style.display = 'block'
+            btnMore.style.display = 'none'
+        }
+    })
+
+    if (btnDiv.classList.contains('work')) {
+        btnClose.style.display = 'none'
+        btnMore.style.display = 'block'
+    } else {
+        btnClose.style.display = 'block'
+        btnMore.style.display = 'none'
+    }
+
+    Abdu(foundFilms, generalBox);
+})
