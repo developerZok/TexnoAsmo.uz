@@ -246,6 +246,20 @@ a {
     border-radius: 10px;
     transition: .5s;
 }
+.c-profil-btn-top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background: var(--green);
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    border-radius: 10px;
+    transition: .5s;
+}
 .c-profil-btn-top-480{
     display: flex;
     align-items: center;
