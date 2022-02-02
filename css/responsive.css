@@ -8,6 +8,10 @@
     .podrobno img {
         width: 350px;
     }
+    .modal__img{
+        width: 380px;
+        height: 380px;
+    }
 }
 
 @media screen and (max-width: 1049px) {
@@ -20,6 +24,10 @@
     .podrobno img {
         width: 300px;
     }
+    .modal__text{
+        width: 350px;
+    }
+
 }
 
 @media screen and (max-width: 991px) {
@@ -61,6 +69,9 @@
     .c-footer-item-list>li {
         text-align: center;
     }
+    .modal__container{
+        width: 95%;
+    }
 }
 
 @media screen and (max-width: 899px) {
@@ -80,13 +91,20 @@
         width: 85.5%;
         height: 225px;
     }
+
+    #c-modal {
+        padding: 50px 60px;
+    }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     body {
         position: relative;
     }
 
+    .counter {
+        margin: 0 20px 0 20px;
+    }
     .c-header-nav {
         display: flex;
         align-items: center;
@@ -136,6 +154,19 @@
     .c-footer {
         padding-bottom: 80px;
     }
+    .modal__container{
+        display: flex;
+        flex-direction: column;
+    }
+    .modal__img{
+        width: 300px;
+        height: 300px;
+        margin: 20px 0;
+    }
+    .modal__container::before{
+        bottom: -40%;
+        right: -70%;
+    }
 }
 
 @media screen and (max-width: 699px) {
@@ -152,6 +183,21 @@
     .podrobno>img:nth-child(3) {
         width: 90%;
         height: 170px;
+    }
+    .cart--box{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .cart--box>img{
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .cart--title{
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 20px;
     }
 }
 
@@ -192,6 +238,9 @@
         width: 90%;
         height: 170px;
     }
+    .c-logIn-modal{
+        padding: 0 15px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -217,6 +266,7 @@
         position: relative;
         display: block;
     }
+
     .c-form-bottom>input {
         width: 210px;
         margin-right: 10px;
@@ -228,7 +278,30 @@
         font-weight: bold;
         color: var(--dark);
     }
-    .c-form-bottom>.c-search-btn{
+
+    .c-form-bottom>.c-search-btn {
         right: 10px;
+    }
+    #c-modal{
+        padding: 50px 30px;
+    }
+    .cart--title{
+        margin-bottom: 0;
+        font-size: 18px;
+    }
+    .counter{
+        margin: 10px 0;
+    }
+    .cart--about{
+        width: 100%;
+        display: flex;justify-content: space-between;
+    }
+    .modal__text{
+        width: 300px;
+    }
+    .modal__img{
+        width: 280px;
+        height: 280px;
+        margin: 20px 0;
     }
 }
