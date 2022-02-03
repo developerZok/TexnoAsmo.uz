@@ -167,6 +167,9 @@
         bottom: -40%;
         right: -70%;
     }
+    .c-footer-item{
+        text-align: center !important;
+    }
 }
 
 @media screen and (max-width: 699px) {
@@ -198,6 +201,9 @@
         width: 100%;
         margin-left: 0;
         margin-bottom: 20px;
+    }
+    .c-footer-item-list{
+        width: 350px;
     }
 }
 
@@ -239,7 +245,7 @@
         height: 170px;
     }
     .c-logIn-modal{
-        padding: 0 15px;
+        padding: 0 10;
     }
 }
 
@@ -303,5 +309,8 @@
         width: 280px;
         height: 280px;
         margin: 20px 0;
+    }
+    .c-footer-item-list{
+        text-align: center;
     }
 }
