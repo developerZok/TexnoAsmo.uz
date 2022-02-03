@@ -26,7 +26,7 @@ let cound_system = 0;
 
 btnDiv.classList.add('work')
 
-// Abdu(btnDiv.classList.contains('work') ? dazmoldates : !btnDiv.classList.contains('work') ? dazmol : 'Xatolik', generalBox)
+Abdu(btnDiv.classList.contains('work') ? dazmoldates : !btnDiv.classList.contains('work') ? dazmol : 'Xatolik', generalBox)
 
 btnMore.addEventListener('click', () => {
     btnDiv.classList.remove('work')
