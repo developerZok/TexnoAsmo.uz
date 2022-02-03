@@ -14,7 +14,7 @@ let cModalClose = document.querySelector('.c-close-kateg-modal');
 kategBtn.addEventListener('click', () => {
     modalKateg.style.display = 'block'
 })
-cModalClose.addEventListener('click', () =>{
+cModalClose.addEventListener('click', () => {
     modalKateg.style.display = 'none'
 })
 // ! new coding end
@@ -26,50 +26,40 @@ let cound_system = 0;
 
 btnDiv.classList.add('work')
 
-Abdu(btnDiv.classList.contains('work') ? stanogdates : !btnDiv.classList.contains('work') ? stanog : 'Xatolik', generalBox)
+// Abdu(btnDiv.classList.contains('work') ? stanogdates : !btnDiv.classList.contains('work') ? stanog : 'Xatolik', generalBox)
 
 btnMore.addEventListener('click', () => {
     btnDiv.classList.remove('work')
     Abdu(btnDiv.classList.contains('work') ? stanogdates : !btnDiv.classList.contains('work') ? stanog : 'Xatolik', generalBox)
-    if(btnDiv.classList.contains('work')) {
+    if (btnDiv.classList.contains('work')) {
         btnClose.style.display = 'none'
         btnMore.style.display = 'block'
-       }else {
+    } else {
         btnClose.style.display = 'block'
         btnMore.style.display = 'none'
-       }
+    }
 })
 btnClose.addEventListener('click', () => {
     btnDiv.classList.add('work')
     Abdu(btnDiv.classList.contains('work') ? stanogdates : !btnDiv.classList.contains('work') ? stanog : 'Xatolik', generalBox)
-    if(btnDiv.classList.contains('work')) {
+    if (btnDiv.classList.contains('work')) {
         btnClose.style.display = 'none'
         btnMore.style.display = 'block'
-       }else {
+    } else {
         btnClose.style.display = 'block'
         btnMore.style.display = 'none'
-       }
+    }
 })
-if(btnDiv.classList.contains('work')) {
- btnClose.style.display = 'none'
- btnMore.style.display = 'block'
-}else {
- btnClose.style.display = 'block'
- btnMore.style.display = 'none'
+if (btnDiv.classList.contains('work')) {
+    btnClose.style.display = 'none'
+    btnMore.style.display = 'block'
+} else {
+    btnClose.style.display = 'block'
+    btnMore.style.display = 'none'
 }
-// btnDiv.classList.add('work')
-// btnMore.addEventListener('click', () => {
-//     btnDiv.classList.remove('work')
-//    if(!btnDiv.classList.contains('work')) {
-//        btnDiv.style.display = 'none'
-//    }else {
-//     btnDiv.style.display = 'flex'
-//    }
-// })
-
-function Abdu(data, generalBox) {
-    generalBox.innerHTML = null;
-
+fetch("https://texno-asmo-1.herokuapp.com/product").then(res => res.json()).then(data => {
+    // generalBox.innerHTML = null;
+    console.log(data);
     data.map(elem => {
         let objectBox = document.createElement("li")
         let div = document.createElement("div")
@@ -82,21 +72,23 @@ function Abdu(data, generalBox) {
 
         //! button modal screen
         let buttonModalScreen = document.createElement("button")
-        buttonModalScreen.dataset.uuid = elem.id
+        buttonModalScreen.dataset.uuid = elem.product_id
         buttonModalScreen.addEventListener("click", (elem) => {
             modal.classList.add("show")
             modal.classList.remove("hide")
 
             let id = elem.target.dataset.uuid
-            let finddata = data.find(elem => elem.id == id)
+            let finddata = data.find(elem => elem.product_id == id)
 
             let modalImg = document.querySelector(".modal__img")
             let modalTitle = document.querySelector(".modal__title")
             let modalPrise = document.querySelector(".modal__prise")
+            let modalText = document.querySelector(".modal__text")
 
-            modalImg.src = finddata.img
-            modalTitle.textContent = finddata.title
-            modalPrise.textContent = finddata.prise
+            modalImg.src = finddata.product_img
+            modalTitle.textContent = finddata.product_title
+            modalPrise.textContent = finddata.product_prise
+            modalText.textContent = finddata.product_description
         })
         // button hide
         buttonClose.addEventListener("click", () => {
@@ -107,7 +99,7 @@ function Abdu(data, generalBox) {
 
         // todoo in korzinka render
         let buttonKorzinka = document.createElement("button")
-        buttonKorzinka.dataset.uuid = elem.id
+        buttonKorzinka.dataset.uuid = elem.product_id
 
         buttonKorzinka.addEventListener("click", (button) => {
 
@@ -127,9 +119,9 @@ function Abdu(data, generalBox) {
                 let counter = document.createElement("div")
                 let countModal = 1
 
-                cartModalImg.setAttribute("src", elem.img)
-                cartModalH5.textContent = elem.title
-                cartModalP.textContent = elem.prise
+                cartModalImg.setAttribute("src", elem.product_img)
+                cartModalH5.textContent = elem.product_title
+                cartModalP.textContent = elem.product_prise
                 cartModalEkrement.textContent = ("+")
                 cartModalSpan.textContent = countModal
                 cartModalDekrement.textContent = ("-")
@@ -171,7 +163,7 @@ function Abdu(data, generalBox) {
 
                 // todoo in korzinka delete
                 //  ?  prise function
-                let totalPrice = elem.prise
+                let totalPrice = elem.product_prise
 
                 function priceTotal() {
                     let total = totalPrice * countModal
@@ -208,9 +200,9 @@ function Abdu(data, generalBox) {
         // todoo in korzinka render
 
 
-        img.setAttribute("src", elem.img)
-        h5.textContent = elem.title
-        p.textContent = elem.prise
+        img.setAttribute("src", elem.product_img)
+        h5.textContent = elem.product_title
+        p.textContent = elem.product_prise
 
         buttonKorzinka.classList.add("c-cart", "c-profil-btn", "buttonKorzinka-active")
         buttonModalScreen.classList.add("bx", "bx-fullscreen")
@@ -231,7 +223,7 @@ function Abdu(data, generalBox) {
         div.appendChild(buttonKorzinka)
         buttonKorzinka.appendChild(icon)
     })
-}
+})
 elForm.addEventListener('submit', (e) => {
     e.preventDefault()
     let elInputValue = elInputSearch.value.trim();
@@ -251,4 +243,3 @@ elForm.addEventListener('submit', (e) => {
 //     let pageLoader = document.querySelector('.c-page-loader').style.display = 'none';
 // })
 // ! lodaer coding
-

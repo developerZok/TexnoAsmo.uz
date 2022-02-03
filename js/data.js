@@ -1,5 +1,4 @@
-// const btnDiv = document.querySelector('.c-btn_div')
-
+//
 let kolonka = [
     {
         id: 1,
