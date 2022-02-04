@@ -64,7 +64,6 @@ fetch("https://texno-asmo-1.herokuapp.com/product").then(res => res.json()).then
                 let cartModalP = document.createElement("p")
                 let cartModalAbout = document.createElement("div")
                 let cartModalScreen = document.createElement("button")
-                let cartModalSendBtn = document.createElement("button")
                 let deletebtnModal = document.createElement("button")
                 let cartModalEkrement = document.createElement("button")
                 let cartModalSpan = document.createElement("span")
@@ -78,7 +77,6 @@ fetch("https://texno-asmo-1.herokuapp.com/product").then(res => res.json()).then
                 cartModalEkrement.textContent = ("+")
                 cartModalSpan.textContent = countModal
                 cartModalDekrement.textContent = ("-")
-                cartModalSendBtn.textContent = ("Send")
 
                 cartModalAbout.classList.add("cart--about")
                 cartModal.classList.add("cart--modal")
@@ -96,7 +94,6 @@ fetch("https://texno-asmo-1.herokuapp.com/product").then(res => res.json()).then
                 buttonKorzinka.removeChild(icon)
 
                 cartModal.appendChild(cartModalDiv)
-                cartModal.appendChild(cartModalSendBtn)
                 cartModalDiv.appendChild(cartModalImg)
                 cartModalDiv.appendChild(cartModalH5)
                 cartModalDiv.appendChild(cartModalAbout)
