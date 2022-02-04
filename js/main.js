@@ -39,8 +39,8 @@ fetch("https://texno-asmo-1.herokuapp.com/product").then(res => res.json()).then
 
             modalImg.src = finddata.product_img
             modalTitle.textContent = finddata.product_title
-            modalPrise.textContent = finddata.product_prise
-            modalText.textContent = finddata.product_text
+            modalPrise.textContent = finddata.product_price
+            modalText.textContent = finddata.prodcut_text
         })
         // button hide
         buttonClose.addEventListener("click", () => {
@@ -73,7 +73,7 @@ fetch("https://texno-asmo-1.herokuapp.com/product").then(res => res.json()).then
 
                 cartModalImg.setAttribute("src", elem.product_img)
                 cartModalH5.textContent = elem.product_title
-                cartModalP.textContent = elem.product_prise
+                cartModalP.textContent = elem.product_price
                 cartModalEkrement.textContent = ("+")
                 cartModalSpan.textContent = countModal
                 cartModalDekrement.textContent = ("-")
@@ -115,7 +115,7 @@ fetch("https://texno-asmo-1.herokuapp.com/product").then(res => res.json()).then
 
                 // todoo in korzinka delete
                 //  ?  prise function
-                let totalPrice = elem.product_prise
+                let totalPrice = elem.product_price
 
                 function priceTotal() {
                     let total = totalPrice * countModal
@@ -154,7 +154,7 @@ fetch("https://texno-asmo-1.herokuapp.com/product").then(res => res.json()).then
 
         img.setAttribute("src", elem.product_img)
         h5.textContent = elem.product_title
-        p.textContent = elem.product_prise
+        p.textContent = elem.product_price
 
         buttonKorzinka.classList.add("c-cart", "c-profil-btn", "buttonKorzinka-active")
         buttonModalScreen.classList.add("bx", "bx-fullscreen")
@@ -194,7 +194,7 @@ let cound_system = 0;
 
 btnDiv.classList.add('work')
 
-Abdu(btnDiv.classList.contains('work') ? dates : !btnDiv.classList.contains('work') ? kolonka : 'Xatolik', generalBox)
+// Abdu(btnDiv.classList.contains('work') ? dates : !btnDiv.classList.contains('work') ? kolonka : 'Xatolik', generalBox)
 
 btnMore.addEventListener('click', () => {
     btnDiv.classList.remove('work')
