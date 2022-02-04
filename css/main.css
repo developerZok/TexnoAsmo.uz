@@ -997,7 +997,6 @@ a {
     border-radius: 10px;
     margin: 30px 0 0 0;
     box-shadow: var(--shadow);
-
 }
 
 .cart--box {
@@ -1011,6 +1010,13 @@ a {
     overflow: hidden;
     box-shadow: var(--shadow);
     background-color: var(--card-before);
+}
+.cart__modal--getbtn{
+    padding: 5px 50px;
+    background-color: var(--green);
+    border: 2px solid var(--green);
+    border-radius: 50px;
+
 }
 
 .cart--box::before {
