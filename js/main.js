@@ -194,7 +194,7 @@ let cound_system = 0;
 
 btnDiv.classList.add('work')
 
-// Abdu(btnDiv.classList.contains('work') ? dates : !btnDiv.classList.contains('work') ? kolonka : 'Xatolik', generalBox)
+Abdu(btnDiv.classList.contains('work') ? dates : !btnDiv.classList.contains('work') ? kolonka : 'Xatolik', generalBox)
 
 btnMore.addEventListener('click', () => {
     btnDiv.classList.remove('work')
